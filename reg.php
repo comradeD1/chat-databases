@@ -2,14 +2,15 @@
 
 
 if (isset($_POST['username'])){
-    require_once __DIR__.'\config.php';
-    include __DIR__.'\boot_sess.php';
+    require_once __DIR__.'/config.php';
+    include __DIR__.'/boot_sess.php';
     $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Ошибка подключения: " . mysqli_error($connect));
     $connection -> set_charset('utf8');
     if (((trim($_POST['username']) == '')) or (trim($_POST['password'] == '')))
     {
-            // flash('Заполните поля!');
-            die('Заполните поля!');
+        header("Location: .\index.php");
+        flash('Пожалуйста, заполните все поля.');
+        die;
     }
 
     $username = mysqli_real_escape_string($connection, trim($_POST['username']));
@@ -30,7 +31,7 @@ if (isset($_POST['username'])){
         else
         {
             echo "Учётная запись создана.";
-            // header('Location: \login.php')
+            header('Location: \login.php');
         }
     }
 

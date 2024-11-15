@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 function flash($message = null) {
     session_start();
     if ($message) {
