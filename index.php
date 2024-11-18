@@ -17,6 +17,7 @@
         <input type="password" id="password" name="password" required>
         <button type="submit">Зарегистрироваться</button>
     </form>
+    <a href="login.php">Войти в аккаунт</a>
     <?php
     include __DIR__.'\boot_sess.php';
     flash();
