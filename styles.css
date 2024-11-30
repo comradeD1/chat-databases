@@ -1,0 +1,10 @@
+.my-message {
+    background-color: bisque;
+    /* width: 15px; */
+    display: inline-block;
+    padding: 5px 10px 5px 5px;
+}
+
+.their-message {
+    background-color: aqua;
+}

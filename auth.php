@@ -22,6 +22,7 @@ if (isset($_GET['logout'])) {
         $sqlReq = "INSERT INTO `users_sessions` (`user_id`,`session_key`) VALUES ('$userID', '$sessionKey')";
         mysqli_query($connection, $sqlReq) or die("Ошибка подключения: " . mysqli_error($connection));
         setcookie('session_key', $sessionKey, time()+3600);
+        setcookie('user_id', $userID, time()+3600);
         header('Location: .\main_page.php');
     } else {
         header('Location: .\login.php');
