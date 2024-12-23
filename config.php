@@ -1,7 +1,7 @@
 <?php
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "chats";
+define ('MYSQL_OPTS', ['host' => 'localhost',
+'user' => 'root',
+'pass' => '',
+'dbname' => "chats"])
 ?>
 

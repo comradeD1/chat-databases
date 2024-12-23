@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="reg-auth-window-wrapper">
+
+            <div class="reg-auth-window">
+                <div class="switch-sign-windows">
+                    <div class="buttons">
+                        <button class="reg-but active">Регистрация</button>
+                        <button class="auth-but">Вход</button>
+                    </div>
+                </div>
+                <div class="reg-window">
+                    <form id="reg-form" method="post">
+                        <p>Нет аккаунта? Создайте его</p>
+                        <label for="username">Логин</label>
+                        <input type="text" name="username" required>
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password" required>
+                        <div class="flash-message"></div>
+                        <button class="confirm" type="submit">Зарегистрироваться</button>
+                    </form>
+                </div>
+                <div class="auth-window hidden">
+                    <form id="auth-form" , method="post">
+                        <p>Есть аккаунт? Войдите в него</p>
+                        <label for="username">Логин</label>
+                        <input type="text" name="username" required>
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password" required>
+                        <div class="flash-message"></div>
+                        <button class="confirm" type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="for-authorizated">
+            <div class="chats-list">
+                <div class="chats-list-header">Поиск и тп</div>
+                <div>Chat 1</div>
+                <div>Chat 2</div>
+            </div>
+            <div class="chat-content">
+                <div class="chat-header">
+                    <h2 class="username">Bob</h2>
+                    <p class="last-seen">online</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
